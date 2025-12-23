@@ -81,6 +81,7 @@ main {
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: clamp(4rem, 8vh, 5rem);
 }
 
 main h1 {
@@ -136,7 +137,7 @@ main h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(2rem, 4vh, 4rem) clamp(1rem, 5vw, 2rem) 0 clamp(1rem, 5vw, 2rem);
+  padding: clamp(2.5rem, 6vh, 4rem) clamp(1rem, 5vw, 2rem) clamp(6rem, 15vh, 12rem) clamp(1rem, 5vw, 2rem);
   margin-bottom: clamp(10rem, 15vh, 20rem);
 }
 
@@ -167,10 +168,14 @@ main h1 {
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  /* For retina/high-dpi: use a 2x or 3x image source if possible */
 }
 
 .content-section {
-  padding: clamp(6rem, 15vh, 12rem) clamp(1rem, 5vw, 2rem);
+  padding: clamp(2.5rem, 6vh, 4rem) clamp(1rem, 5vw, 2rem) clamp(6rem, 15vh, 12rem) clamp(1rem, 5vw, 2rem);
   max-width: 1000px;
   margin: 0 auto;
   min-height: 70vh;
