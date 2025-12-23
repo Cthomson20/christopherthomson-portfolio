@@ -97,9 +97,9 @@ function App() {
       </header>
       
       <main>
-        <section id="about" className="hero-section">
+        <section id="about" className="hero-section scroll-section content-section">
           <div className="profile-image-container">
-            <img src="" alt="Christopher Thomson" className="profile-image" />
+            <img src="/headshot.jpeg" alt="Christopher Thomson" className="profile-image" />
           </div>
           <h1>Christopher Thomson</h1>
           <div className="typing-container">
