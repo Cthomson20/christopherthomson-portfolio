@@ -7,6 +7,7 @@
 .app-footer {
   text-align: center;
   font-size: clamp(0.875rem, 2vw, 1rem);
+  margin-top: 5rem;
 }
 
 .app {
@@ -183,7 +184,6 @@ main h1 {
 
 .content-section h2 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  margin-bottom: 3rem;
 }
 
 .content-section p {
@@ -269,9 +269,75 @@ main h1 {
   text-decoration: none;
   color: inherit;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-links a:hover {
-  background-color: #3b82f6;
-  transform: scale(1.05);
+.contact-links a.email {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.contact-links a.email:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.contact-links a.contact-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.contact-links a.contact-icon:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.contact-links a.contact-icon.linkedin {
+  background: #3b82f6;
+}
+
+.contact-links a.contact-icon.linkedin:hover {
+  background: #2563eb;
+}
+
+.contact-links a.contact-icon.github {
+  background: #3b82f6;
+}
+
+.contact-links a.contact-icon.github:hover {
+  background: #2563eb;
+}
+
+.contact-links a.email svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.contact-links a.contact-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }

@@ -39,6 +39,8 @@ function App() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible')
+        } else {
+          entry.target.classList.remove('visible')
         }
       })
     }, observerOptions)
@@ -75,6 +77,29 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('.nav-container a[href^="#"]');
+    function handleNavClick(e) {
+      const href = e.currentTarget.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const header = document.querySelector('.app-header');
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetRect = target.getBoundingClientRect();
+          const scrollY = window.scrollY + targetRect.top;
+          const centerOffset = (window.innerHeight - target.offsetHeight) / 2;
+          // Ensure we don't scroll above the top
+          const scrollTo = Math.max(scrollY - headerHeight - centerOffset, 0);
+          window.scrollTo({ top: scrollTo, behavior: 'smooth' });
+        }
+      }
+    }
+    navLinks.forEach(link => link.addEventListener('click', handleNavClick));
+    return () => navLinks.forEach(link => link.removeEventListener('click', handleNavClick));
+  }, []);
+
   return (
     <div className="app">
       <header className="app-header">
@@ -99,7 +124,7 @@ function App() {
       <main>
         <section id="about" className="hero-section scroll-section content-section">
           <div className="profile-image-container">
-            <img src="/headshot.png" alt="Christopher Thomson" className="profile-image" />
+            <img src="/christopherthomson-portfolio/headshot.png" alt="Christopher Thomson" className="profile-image" />
           </div>
           <h1>Christopher Thomson</h1>
           <div className="typing-container">
@@ -108,7 +133,7 @@ function App() {
           </div>
           <p className="hero-about">
             I'm a passionate developer and data enthusiast with experience in full-stack development
-            and data science. Currently working as a Data Science Mentee at SPE and formerly a 
+            and data science. Currently working as a Data Science Mentee at SPE and formerly a
             Developer Student at Alberta Health Services.
           </p>
         </section>
@@ -153,15 +178,25 @@ function App() {
           <h2>Contact</h2>
           <p>Let's get in touch!</p>
           <div className="contact-links">
-            <a href="mailto:your.email@example.com">Email</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:christopherthomson2026@gmail.com" title="Email" className="contact-icon email" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="4"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/christopher-thomson-cgy/" title="LinkedIn" target="_blank" rel="noopener noreferrer" className="contact-icon linkedin" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595zm0 0"/></svg>
+            </a>
+            <a href="https://github.com/Cthomson20" title="GitHub" target="_blank" rel="noopener noreferrer" className="contact-icon github" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="/christopherthomson-portfolio/CV.pdf" title="Download Resume/CV" download className="contact-icon cv" aria-label="Download Resume/CV">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828A2 2 0 0 0 19.414 8L16 4.586A2 2 0 0 0 14.828 4H6zm7 1.414L18.586 7H15a2 2 0 0 1-2-2V3.414zM8 12h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+            </a>
           </div>
+        <footer className="app-footer">
+          <p>&copy; 2025 Christopher Thomson. All rights reserved.</p>
+        </footer>
         </section>
       </main>
-      <footer className="app-footer">
-        <p>&copy; 2025 Christopher Thomson. All rights reserved.</p>
-      </footer>
+      
     </div>
   )
 }
