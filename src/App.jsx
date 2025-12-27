@@ -158,18 +158,113 @@ function App() {
 
         <section id="skills" className="scroll-section content-section">
           <h2>Skills</h2>
-          <div className="skills-grid">
+          <div id="programming-languages" className="skills-grid">
             <div className="skill-category">
-              <h3>Languages</h3>
-              <p>Python, JavaScript, SQL, R</p>
+              <h3>Programming Languages</h3>
+              <div className="skills-icons">
+                <div className="skill-item" title='Python'>
+                  <img src="https://cdn.simpleicons.org/python" alt="Python" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='JavaScript'>
+                  <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='SQL'>
+                  <img src="/christopherthomson-portfolio/logos/SQL_Image.svg" alt="SQL" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='HTML'>
+                  <img src="https://cdn.simpleicons.org/html5" alt="HTML" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='CSS'>
+                  <img src="https://cdn.simpleicons.org/css" alt="CSS" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='TailwindCSS'>
+                  <img src="https://cdn.simpleicons.org/tailwindcss" alt="TailwindCSS" className="skill-logo" />
+                </div>
+              </div>
             </div>
-            <div className="skill-category">
-              <h3>Frameworks</h3>
-              <p>React, Node.js, Express</p>
+            
+            <div id="frameworks-libraries" className="skill-category">
+              <h3>Frameworks & Libraries</h3>
+              <div className="skills-icons">
+                <div className="skill-item" title='TensorFlow'>
+                  <img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Docusaurus'>
+                  <img src="https://cdn.simpleicons.org/docusaurus" alt="Docusaurus" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='HuggingFace'>
+                  <img src="https://cdn.simpleicons.org/huggingface" alt="HuggingFace" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Node.js'>
+                  <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='React'>
+                  <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Spark'>
+                  <img src="/christopherthomson-portfolio/logos/apache_spark-icon.svg" alt="Spark" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Pandas'>
+                  <img src="https://cdn.simpleicons.org/pandas" alt="Pandas" className="skill-logo" />
+                </div>
+              </div>
             </div>
-            <div className="skill-category">
-              <h3>Tools</h3>
-              <p>Git, Docker, VS Code</p>
+            
+            <div id="devops-infrastructure" className="skill-category">
+              <h3>DevOps & Infrastructure</h3>
+              <div className="skills-icons">
+                <div className="skill-item" title='Docker'>
+                  <img src="https://cdn.simpleicons.org/docker" alt="Docker" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Podman'>
+                  <img src="https://cdn.simpleicons.org/podman" alt="Podman" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='GitLab CI/CD'>
+                  <img src="https://cdn.simpleicons.org/gitlab" alt="GitLab CI/CD" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Linux'>
+                  <img src="https://cdn.simpleicons.org/linux" alt="Linux" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='macOS'>
+                  <img src="https://cdn.simpleicons.org/apple" alt="macOS" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Windows'>
+                  <img src="/christopherthomson-portfolio/logos/microsoft-icon.svg" alt="Windows" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='PostgreSQL'>
+                  <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='VS Code'>
+                  <img src="/christopherthomson-portfolio/logos/visualstudio_code-icon.svg" alt="VS Code" className="skill-logo" />
+                </div>
+              </div>
+            </div>
+            
+            <div id="cloud-enterprise" className="skill-category">
+              <h3>Cloud & Enterprise</h3>
+              <div className="skills-icons" >
+                <div className="skill-item" title='Microsoft 365'>
+                  <img src="/christopherthomson-portfolio/logos/office-2.svg" alt="Microsoft 365" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='SharePoint'>
+                  <img src="/christopherthomson-portfolio/logos/microsoft-sharepoint.svg" alt="SharePoint" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='ServiceNow'>
+                  <img src="/christopherthomson-portfolio/logos/servicenow-icon.svg" alt="ServiceNow" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Power Automate'>
+                  <img src="/christopherthomson-portfolio/logos/Microsoft_Power_Automate.svg" alt="Power Automate" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Jira'>
+                  <img src="https://cdn.simpleicons.org/jira" alt="Jira" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Tableau'>
+                  <img src="/christopherthomson-portfolio/logos/tableau-icon.svg" alt="Tableau" className="skill-logo" />
+                </div>
+                <div className="skill-item" title='Firebase'>
+                  <img src="/christopherthomson-portfolio/logos/firebase-icon.svg" alt="Firebase" className="skill-logo" />
+                </div>
+              </div>
             </div>
           </div>
         </section>

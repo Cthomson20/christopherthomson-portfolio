@@ -235,22 +235,52 @@ main h1 {
 }
 
 /* Skills */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  /* margin-top: 2rem; */
 }
 
 .skill-category {
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
 
 .skill-category h3 {
   margin-bottom: 1rem;
   color: #3b82f6;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* flex-wrap: wrap; */
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.skill-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-item:hover {
+  transform: scale(1.12) translateY(-6px);
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.18), 0 1.5px 6px rgba(0,0,0,0.08);
+  background: rgba(59, 130, 246, 0.07);
+  border-radius: 50%;
 }
 
 /* Contact */
