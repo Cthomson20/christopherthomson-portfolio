@@ -89,9 +89,8 @@ function App() {
           const headerHeight = header ? header.offsetHeight : 0;
           const targetRect = target.getBoundingClientRect();
           const scrollY = window.scrollY + targetRect.top;
-          const centerOffset = (window.innerHeight - target.offsetHeight) / 2;
           // Ensure we don't scroll above the top
-          const scrollTo = Math.max(scrollY - headerHeight - centerOffset, 0);
+          const scrollTo = Math.max(scrollY - headerHeight, 0);
           window.scrollTo({ top: scrollTo, behavior: 'smooth' });
         }
       }
@@ -141,18 +140,135 @@ function App() {
         <section id="projects" className="scroll-section content-section">
           <h2>Projects</h2>
           <div className="projects-grid">
-            <div className="project-card">
-              <h3>Project 1</h3>
-              <p>Description of your project goes here.</p>
-            </div>
-            <div className="project-card">
-              <h3>Project 2</h3>
-              <p>Description of your project goes here.</p>
-            </div>
-            <div className="project-card">
-              <h3>Project 3</h3>
-              <p>Description of your project goes here.</p>
-            </div>
+            <a id="dreamtrack" className="project-card">
+              <h3>DreamTrack</h3>
+              <p>
+                A comprehensive job application tracking platform designed to streamline the
+                job search and hiring process for job seekers, employers, and administrators.
+                Deployed using Docker containers and hosted on Firebase for scalability and reliability.
+              </p>
+              <div className="project-skills">
+                <h4>Tech Stack:</h4>
+                <div className="project-skills-logos">
+                  <div className="project-skill" title="Firebase">
+                    <img src="/christopherthomson-portfolio/logos/firebase-icon.svg" alt="Firebase" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='Docker'>
+                    <img src="https://cdn.simpleicons.org/docker" alt="Docker" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='JavaScript'>
+                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='HTML'>
+                    <img src="https://cdn.simpleicons.org/html5" alt="HTML" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title="TailwindCSS">
+                    <img src="https://cdn.simpleicons.org/tailwindcss" alt="TailwindCSS" className="skill-logo" />
+                  </div>
+                </div>
+              </div>
+              <div className="project-links">
+                <h4>Github URL</h4>
+                <a href="https://github.com/Cthomson20/DreamTrack-WebApp" title="GitHub" target="_blank" rel="noopener noreferrer" className="contact-icon github" aria-label="GitHub">
+                <svg className="link-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </a>
+            <a id="atlas" className="project-card">
+              <h3>ATLAS</h3>
+              <p>
+                A dynamically updating documentation website for Alberta Health Services' internal
+                tools and processes. Built to provide an intuitive interface for
+                healthcare professionals to access up-to-date documents and diagrams efficiently.
+                Hosted using in-house linux servers and Podman containers.
+              </p>
+              <div className="project-skills">
+                <h4>Tech Stack</h4>
+                <div className="project-skills-logos">
+                  <div className="project-skill" title='Podman'>
+                    <img src="https://cdn.simpleicons.org/podman" alt="Podman" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='Linux'>
+                    <img src="https://cdn.simpleicons.org/linux" alt="Linux" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='GitLab CI/CD'>
+                    <img src="https://cdn.simpleicons.org/gitlab" alt="GitLab CI/CD" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='Node.js'>
+                    <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='JavaScript'>
+                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" />
+                  </div>
+                </div>
+              </div>
+              <h5>*Please reachout for more information/references*</h5>
+            </a>
+            <a id="customer-pipeline" className="project-card">
+              <h3>Video Game Sales Analytics Dashboard Pipeline</h3>
+              <p>
+                Video game sales analytics dashboard, developed an end‑to‑end ETL data pipeline
+                in Python (PySpark/Pandas) and SQL (PostgreSQL), improving data
+                quality and enabling automated reporting for stakeholders.
+              </p>
+              <div className="project-skills">
+                <h4>Tech Stack</h4>
+                <div className="project-skills-logos">
+                  <div className="project-skill" title='Python'>
+                    <img src="https://cdn.simpleicons.org/python" alt="Python" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='PostgreSQL'>
+                    <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='Spark'>
+                    <img src="/christopherthomson-portfolio/logos/apache_spark-icon.svg" alt="Spark" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='Pandas'>
+                    <img src="https://cdn.simpleicons.org/pandas" alt="Pandas" className="skill-logo" />
+                  </div>
+                </div>
+              </div>
+              <div className="project-links">
+                <h4>Github URL</h4>
+                <a href="https://github.com/Cthomson20/seng550-customer-analytics-dashboard-pipeline" title="GitHub" target="_blank" rel="noopener noreferrer" className="contact-icon github" aria-label="GitHub">
+                <svg className="link-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </a>
+            <a id="dreamtrack" className="project-card">
+              <h3>Movie Theatre UI</h3>
+              <p>
+                Comprehensive movie theatre ticket booking system front-end only.
+                The application allows users to browse movies, select showtimes,
+                choose seats, and complete ticket purchases through an
+                intuitive multi-step booking flow.
+              </p>
+              <div className="project-skills">
+                <h4>Tech Stack:</h4>
+                <div className="project-skills-logos">
+                  <div className="project-skill" title='React'>
+                    <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='HTML'>
+                    <img src="https://cdn.simpleicons.org/html5" alt="HTML" className="skill-logo" />
+                  </div>
+                  <div className="project-skill" title='CSS'>
+                    <img src="https://cdn.simpleicons.org/css" alt="CSS" className="skill-logo" />
+                  </div>
+                </div>
+              </div>
+              <h4>URL's</h4>
+              <div className="project-links">
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <a href="https://github.com/Cthomson20/movie_theatre_system" title="GitHub" target="_blank" rel="noopener noreferrer" className="contact-icon github" aria-label="GitHub">
+                    <svg className="link-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                  <a href="https://cthomson20.github.io/movie_theatre_system/" title="Live Demo" target="_blank" rel="noopener noreferrer" className="contact-icon movie" aria-label="Live Demo">
+                    <img src="/christopherthomson-portfolio/logos/playbutton.svg" alt="Live Demo" className="link-logo" />
+                  </a>
+                </div>
+              </div>
+            </a>
           </div>
         </section>
 
