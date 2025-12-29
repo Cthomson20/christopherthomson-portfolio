@@ -157,7 +157,7 @@ function App() {
                     <img src="https://cdn.simpleicons.org/docker" alt="Docker" className="skill-logo" />
                   </div>
                   <div className="project-skill" title='JavaScript'>
-                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" />
+                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" style={{ filter: 'brightness(0.95)' }}/>
                   </div>
                   <div className="project-skill" title='HTML'>
                     <img src="https://cdn.simpleicons.org/html5" alt="HTML" className="skill-logo" />
@@ -189,7 +189,7 @@ function App() {
                     <img src="https://cdn.simpleicons.org/podman" alt="Podman" className="skill-logo" />
                   </div>
                   <div className="project-skill" title='Linux'>
-                    <img src="https://cdn.simpleicons.org/linux" alt="Linux" className="skill-logo" />
+                    <img src="https://cdn.simpleicons.org/linux" alt="Linux" className="skill-logo" style={{ filter: 'brightness(0.95)' }}/>
                   </div>
                   <div className="project-skill" title='GitLab CI/CD'>
                     <img src="https://cdn.simpleicons.org/gitlab" alt="GitLab CI/CD" className="skill-logo" />
@@ -198,7 +198,7 @@ function App() {
                     <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" className="skill-logo" />
                   </div>
                   <div className="project-skill" title='JavaScript'>
-                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" />
+                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-logo" style={{ filter: 'brightness(0.95)' }}/>
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@ function App() {
                 <h4>Tech Stack:</h4>
                 <div className="project-skills-logos">
                   <div className="project-skill" title='React'>
-                    <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" />
+                    <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" style={{ filter: 'brightness(0.7)' }}/>
                   </div>
                   <div className="project-skill" title='HTML'>
                     <img src="https://cdn.simpleicons.org/html5" alt="HTML" className="skill-logo" />
@@ -306,16 +306,16 @@ function App() {
                   <img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" className="skill-logo" />
                 </div>
                 <div className="skill-item" title='Docusaurus'>
-                  <img src="https://cdn.simpleicons.org/docusaurus" alt="Docusaurus" className="skill-logo" />
+                      <img src="https://cdn.simpleicons.org/docusaurus" alt="Docusaurus" className="skill-logo" style={{ filter: 'brightness(0.90)' }}/>
                 </div>
                 <div className="skill-item" title='HuggingFace'>
-                  <img src="https://cdn.simpleicons.org/huggingface" alt="HuggingFace" className="skill-logo" />
+                  <img src="https://cdn.simpleicons.org/huggingface" alt="HuggingFace" className="skill-logo" style={{ filter: 'brightness(0.95)' }}/>
                 </div>
                 <div className="skill-item" title='Node.js'>
                   <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" className="skill-logo" />
                 </div>
                 <div className="skill-item" title='React'>
-                  <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" />
+                  <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-logo" style={{ filter: 'brightness(0.7)' }} />
                 </div>
                 <div className="skill-item" title='Spark'>
                   <img src="/christopherthomson-portfolio/logos/apache_spark-icon.svg" alt="Spark" className="skill-logo" />
